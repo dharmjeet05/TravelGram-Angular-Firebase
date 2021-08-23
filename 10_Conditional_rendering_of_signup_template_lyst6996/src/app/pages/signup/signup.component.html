@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-          <form (onSubmit)="onSubmit(f)" #f="ngForm">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div>
               <!-- image picker -->
               <div class="text-center">
@@ -38,7 +38,7 @@
                 class="text-white text-center"
               >
                 uploading
-                {{ uploadPercent | number: "1.0-0" }}% of 100%
+                {{ uploadPercent | number: "1.0-0" }} % of 100%
               </div>
               <div
                 *ngIf="uploadPercent == 100"

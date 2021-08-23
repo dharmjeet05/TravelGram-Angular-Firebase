@@ -7,18 +7,12 @@
         </div>
 
         <div class="card-body">
-          <form (onSubmit)="onSubmit(f)" #f="ngForm">
+          <form>
             <div>
               <!-- image picker -->
               <div class="text-center">
                 <label for="imagepicker" class="">
-                  <img
-                    [src]="picture"
-                    width="40"
-                    height="40"
-                    alt=""
-                    class="profile"
-                  />
+                  <img alt="" class="profile" />
                 </label>
 
                 <input
@@ -29,21 +23,11 @@
                   multiple="{false}"
                   class="hidden"
                   hidden
-                  (change)="uploadFile($event)"
                 />
               </div>
 
-              <div
-                [hidden]="!uploadPercent || uploadPercent == 100"
-                class="text-white text-center"
-              >
-                uploading
-                {{ uploadPercent | number: "1.0-0" }}% of 100%
-              </div>
-              <div
-                *ngIf="uploadPercent == 100"
-                class="text-success text-uppercase text-center mb-3"
-              >
+              <div class="text-white text-center">uploading</div>
+              <div class="text-success text-uppercase text-center mb-3">
                 Upload finished
               </div>
             </div>
@@ -58,7 +42,6 @@
                   name="name"
                   placeholder="Enter Name"
                   required
-                  ngModel
                 />
               </div>
             </div>
@@ -73,7 +56,6 @@
                   name="email"
                   placeholder="Enter Email"
                   required
-                  ngModel
                 />
               </div>
             </div>
@@ -90,7 +72,6 @@
                   name="password"
                   placeholder="Enter password"
                   required
-                  ngModel
                 />
                 <small id="emailHelp" class="form-text text-muted"
                   >Minimum length of the password should be 6 or more</small
@@ -110,7 +91,6 @@
                   name="username"
                   placeholder="Enter your handle of instagram"
                   required
-                  ngModel
                 />
               </div>
             </div>
@@ -125,7 +105,6 @@
                   name="country"
                   placeholder="Your Country"
                   required
-                  ngModel
                 />
               </div>
             </div>
@@ -140,17 +119,12 @@
                   name="bio"
                   placeholder="some bio about you"
                   required
-                  ngModel
                 ></textarea>
               </div>
             </div>
 
             <div class="text-center">
-              <button
-                [disabled]="!f.form.valid"
-                class="btn btn-primary"
-                type="submit"
-              >
+              <button class="btn btn-primary" type="submit">
                 Sign Up
               </button>
             </div>
