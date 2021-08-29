@@ -1,3 +1,7 @@
 .active {
-  border-bottom: 1px solid #fff;
+  border: 1px solid #fff;
+}
+
+.logoutbtn {
+  cursor: pointer;
 }
