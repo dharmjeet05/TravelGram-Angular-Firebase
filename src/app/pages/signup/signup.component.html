@@ -7,7 +7,7 @@
         </div>
 
         <div class="card-body">
-          <form (onSubmit)="onSubmit(f)" #f="ngForm">
+          <form #f="ngForm">
             <div>
               <!-- image picker -->
               <div class="text-center">
@@ -48,7 +48,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <label for="name" class="col-sm-3 col-form-label">Name</label>
               <div class="col-sm-9">
                 <input
@@ -63,7 +63,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <label for="email" class="col-sm-3 col-form-label">Email</label>
               <div class="col-sm-9">
                 <input
@@ -78,7 +78,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <label for="password" class="col-sm-3 col-form-label"
                 >Password</label
               >
@@ -98,7 +98,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <label for="email" class="col-sm-3 col-form-label"
                 >Instagram name</label
               >
@@ -115,7 +115,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <label for="email" class="col-sm-3 col-form-label">Country</label>
               <div class="col-sm-9">
                 <input
@@ -130,7 +130,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row mt-3">
               <label for="email" class="col-sm-3 col-form-label">bio</label>
               <div class="col-sm-9">
                 <textarea
@@ -145,11 +145,12 @@
               </div>
             </div>
 
-            <div class="text-center">
+            <div class="text-center mt-3">
               <button
                 [disabled]="!f.form.valid"
                 class="btn btn-primary"
                 type="submit"
+                (click)="onSubmit(f)"
               >
                 Sign Up
               </button>

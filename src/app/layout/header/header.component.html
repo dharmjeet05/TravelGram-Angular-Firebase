@@ -16,13 +16,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <div *ngIf="email" class="navbar-text float-left">{{ email }}</div>
-      <a
-        [routerLink]="['/']"
-        routerLinkActive="active"
-        class="nav-item nav-link"
-      >
-        Home
-      </a>
+      <a [routerLink]="['/']" class="nav-item nav-link"> Home </a>
       <a
         *ngIf="!email"
         [routerLink]="['/signin']"
@@ -47,6 +41,7 @@
         LogOut
       </a>
       <a
+        *ngIf="email"
         [routerLink]="['/addpost']"
         class="nav-item nav-link btn btn-warning text-primary"
       >
