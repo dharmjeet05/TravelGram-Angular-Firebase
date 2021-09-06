@@ -17,6 +17,9 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { readAndCompressImage } from 'browser-image-resizer';
 import { imageConfig } from 'src/utils/config';
 
+// Uuid
+import { v4 as uuidv4 } from 'uuid';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -71,7 +74,7 @@ export class SignupComponent implements OnInit {
 
     let resizedImage = await readAndCompressImage(file, imageConfig);
 
-    const filePath = file.name; // rename the image with TODO:UUID
+    const filePath = uuidv4();
     const fileRef = this.storage.ref(filePath);
 
     const task = this.storage.upload(filePath, resizedImage);
