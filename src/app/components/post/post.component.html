@@ -1,20 +1,23 @@
-<div class="card mb-3 border-secondary">
-  <a href="#" target="_blank">
-    <img
-      [src]="post.picture"
-      height="500"
-      width="auto"
-      class="card-img-top img-fluid"
-    />
-  </a>
+<div class="card mb-5 border-secondary">
   <div class="card-body">
-    <h5 class="card-title text-primary text-uppercase">
+    <h5 class="card-title text-primary">
+      {{ post.by }}
+    </h5>
+  </div>
+  <img
+    [src]="post.picture"
+    height="500"
+    width="auto"
+    class="card-img-top img-fluid"
+  />
+  <div class="card-body">
+    <h5 class="card-title text-uppercase">
       {{ post.locationName }}
     </h5>
     <p class="card-text">{{ post.description }}</p>
-    <p class="card-text">
+    <!-- <p class="card-text">
       <small class="text-muted">by:- {{ post.by }}</small>
-    </p>
+    </p> -->
   </div>
   <div
     class="

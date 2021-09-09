@@ -13,49 +13,59 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto">
         <div *ngIf="email" class="navbar-text float-left text-white me-4">
           {{ email }}
         </div>
-        <a
-          *ngIf="email"
-          [routerLink]="['/']"
-          routerLinkActive="active"
-          class="nav-item nav-link text-white"
-        >
-          Home
-        </a>
-        <a
-          *ngIf="!email"
-          [routerLink]="['/signin']"
-          routerLinkActive="active"
-          class="nav-item nav-link text-white"
-        >
-          SignIn
-        </a>
-        <a
-          *ngIf="!email"
-          [routerLink]="['/signup']"
-          routerLinkActive="active"
-          class="nav-item nav-link text-white"
-        >
-          SignUp
-        </a>
-        <a
-          *ngIf="email"
-          (click)="handleSignOut()"
-          class="nav-item nav-link text-white logoutbtn"
-        >
-          Logout
-        </a>
-        <a
-          *ngIf="email"
-          [routerLink]="['/addpost']"
-          class="nav-item nav-link btn btn-warning text-black"
-        >
-          Post Your Story
-        </a>
-      </div>
+        <li class="nav-item">
+          <a
+            *ngIf="email"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            class="nav-item nav-link text-white"
+          >
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            *ngIf="!email"
+            [routerLink]="['/signin']"
+            routerLinkActive="active"
+            class="nav-item nav-link text-white"
+          >
+            SignIn
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            *ngIf="!email"
+            [routerLink]="['/signup']"
+            routerLinkActive="active"
+            class="nav-item nav-link text-white"
+          >
+            SignUp
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            *ngIf="email"
+            (click)="handleSignOut()"
+            class="nav-item nav-link text-white logoutbtn"
+          >
+            Logout
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            *ngIf="email"
+            [routerLink]="['/addpost']"
+            class="nav-item nav-link btn btn-warning text-black"
+          >
+            Add Your Post
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

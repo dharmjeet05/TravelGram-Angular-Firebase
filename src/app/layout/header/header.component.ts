@@ -10,6 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
   email = null;
+  name = null;
 
   constructor(
     private auth: AuthService,
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
     auth.getUser().subscribe((user) => {
       console.log('USER IS: ', user);
 
+      this.name = user.displayName;
       this.email = user?.email;
     });
   }
