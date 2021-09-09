@@ -19,7 +19,7 @@
           />
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-3">
           <label for="description">Description</label>
           <textarea
             type="text"
@@ -33,7 +33,7 @@
           ></textarea>
         </div>
 
-        <div class="text-center mb-4 mt-2">
+        <div class="text-center mb-4 mt-3">
           <label for="imagepicker" class=""> Add your awesome photo </label>
 
           <input
@@ -68,8 +68,8 @@
       </form>
     </div>
   </div>
-  <div class="col col-md-6 mt-5">
-    <h3 *ngIf="picture" class="text-success text-center mt-5 text-uppercase">
+  <div class="col col-md-6">
+    <h3 *ngIf="picture" class="text-success text-center text-uppercase">
       Your Image
     </h3>
     <img *ngIf="picture" [src]="picture" alt="" class="img-fluid" />
