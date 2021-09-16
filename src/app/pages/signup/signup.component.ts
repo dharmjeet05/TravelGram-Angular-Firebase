@@ -27,7 +27,7 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class SignupComponent implements OnInit {
   picture: string =
-    'https://images.pexels.com/photos/7775641/pexels-photo-7775641.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260';
+    'https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg';
   uploadPercent: number = null;
 
   constructor(

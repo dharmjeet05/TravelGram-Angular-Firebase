@@ -17,15 +17,23 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private toastr: ToastrService
   ) {
-    auth.getUser().subscribe((user) => {
-      console.log('USER IS: ', user);
+    setInterval(() => {
+      this.auth.getUser().subscribe((user) => {
+        console.log('USER IS: ', user);
 
-      this.name = user.displayName;
-      this.email = user?.email;
-    });
+        this.name = user.displayName;
+        this.email = user?.email;
+      });
+      // the following is required, otherwise the view will not be updated
+      this.email.markForCheck();
+    }, 1000);
   }
 
   ngOnInit(): void {}
+
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log(changes);
+  // }
 
   async handleSignOut() {
     try {
